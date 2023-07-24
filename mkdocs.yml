@@ -1,0 +1,10 @@
+site_name: Python-for-Data-Analysis-3E-Annotation
+site_author: Misaki
+
+theme:
+  name: material
+  features:
+languages: cn
+
+# Copyright
+copyright: Copyright &copy; 2023 Misaki
