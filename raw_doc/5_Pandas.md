@@ -1,4 +1,4 @@
-# 基本数据结构
+# 基本数据结构（gyw）
 
 两种基本的数据结构
 
@@ -28,17 +28,15 @@
 4. `.to_dict`转为字典
 5. `.isna()` `.notna()` 检测缺失数据
 
-
-
 ## DateFrame
 
 ### 5个组成部分
 
 1. data 序列的值  `.values`
 2. index 行索引 `.index`
-3. columns 列索引 `.columns` 
+3. columns 列索引 `.columns`
 4. dtype 存储类型 `.dtype  # 返回的是值为相应列数据类型的Series`
-5. name 序列名称 `.name` df本身并没`name`属性，而是其`index` `columns`对应Series具有
+5. name 序列名称 `.name` df本身并没 `name`属性，而是其 `index` `columns`对应Series具有
 
 ### 构造
 
@@ -51,7 +49,7 @@
 
 1. `.`取出相应的属性
 2. `.T`进行转置
-3.  `df[col_name]`修改或新增一列，`df[col_list]`修改多列
+3. `df[col_name]`修改或新增一列，`df[col_list]`修改多列
 4. `drop`删除某一行/列
 5. `to_numpy()`将df以二维ndarray返回
 
@@ -59,13 +57,11 @@
 
 `Index`对象
 
-
-
 # 基本功能
 
 ## 重建索引
 
-`.reindex` 
+`.reindex`
 
 ## 删除指定轴上的项
 
@@ -73,11 +69,11 @@
 
 ## 索引、选取和过滤
 
-`loc` `iloc` 
+`loc` `iloc`
 
 ## 算术运算和数据对齐
 
-缺失值填充 `fill_value = ` 
+缺失值填充 `fill_value = `
 
 广播机制
 
@@ -89,13 +85,11 @@
 
 ## 排序和排名
 
-`sort_value()` `sort_index` 
-缺失值处理`np_position = `  
+`sort_value()` `sort_index`
+缺失值处理 `np_position = `
 
-`rank()` 
+`rank()`
 评级关系打破方法
-
-
 
 # 描述性统计汇总和计算
 
@@ -105,11 +99,8 @@
 
 ## 相关系数与协方差
 
-`corr` `cov` `corrwith` 
+`corr` `cov` `corrwith`
 
 ## 唯一值、计数及成员属性
 
-`unique` `value_counts` `isin` `match` 
-
-
-
+`unique` `value_counts` `isin` `match`
