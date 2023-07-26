@@ -1,4 +1,4 @@
-# ndarray(gyw)
+# ndarray
 
 ndarray:通用的同构数据多维容器（同构即其中元素必须是相同类型的）
 
