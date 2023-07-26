@@ -12,7 +12,7 @@ ndarray:通用的同构数据多维容器（同构即其中元素必须是相同
 
 ## 数据类型的转换：
 
-`ndarray.astype("dtype")` 
+`ndarray.astype("dtype")`
 
 ## Numpy数组的运算：
 
@@ -29,7 +29,7 @@ ndarray:通用的同构数据多维容器（同构即其中元素必须是相同
 布尔型索引：
 
 - 用逻辑表达式来进行索引，达到筛选的目的
-- `and` `or` ,不能使用，用`&` `|` 
+- `and` `or` ,不能使用，用 `&` `|`
 
 花式(fancy)索引：
 
@@ -61,16 +61,10 @@ ndarray:通用的同构数据多维容器（同构即其中元素必须是相同
 
 ![](http://upload-images.jianshu.io/upload_images/7178691-236dba83b6a420cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-
 ![](http://upload-images.jianshu.io/upload_images/7178691-a6c6df3ca8e0b98e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](http://upload-images.jianshu.io/upload_images/7178691-866fcde885b1d357.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-
 ![](http://upload-images.jianshu.io/upload_images/7178691-80e85ae6b9c89ada.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
 
 ![](http://upload-images.jianshu.io/upload_images/7178691-dcdb66e49e5f70ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
