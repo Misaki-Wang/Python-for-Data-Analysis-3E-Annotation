@@ -7,9 +7,13 @@
 
 **一维的 Series**  &  **二维的 DataFrame**
 
-## Series
+## Series [相关网址](https://pandas.pydata.org/docs/reference/api/pandas.Series.html?highlight=series#pandas.Series)
 
 ### 4个组成部分
+
+```python
+class pandas.Series(data=None, index=None, dtype=None, name=None, copy=None, fastpath=False)
+```
 
 1. data 序列的值  `.values`
 2. index 索引 `.index`
@@ -31,9 +35,13 @@
 4. `.to_dict`转为字典
 5. `.isna()` `.notna()` 检测缺失数据
 
-## DateFrame
+## DateFrame [相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html?highlight=dataframe#pandas.DataFrame)
 
 ### 5个组成部分
+
+```python
+class pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=None)
+```
 
 1. data 序列的值  `.values`
 2. index 行索引 `.index`
@@ -60,7 +68,12 @@
 
 `Index`对象
 
-1. 相关参数: class pandas.Index(data=None, dtype=None, copy=False, name=None, tupleize_cols=True)
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.Index.html?highlight=index#pandas.Index)
+
+1. 相关参数:
+   ```python
+   class pandas.Index(data=None, dtype=None, copy=False, name=None, tupleize_cols=True)
+   ```
 
 * `data`任意数组（一维）或者Series和Dataframe的标签序列
 * `dtype`若dtype为None，将会找到最适合数据的dtype；若提供了实际的dtype,在安全的前提下，会强制使用该dtype
@@ -77,18 +90,11 @@
 
 `.reindex`
 
+[相关网址](https://pandas.pydata.org/docs/search.html?q=reindex)
+
 1. 不同对象reindex方法的参数
 
-```python
-**Series.**reindex**(** *index*=*None* , *axis*=None ,  *method*=None ,  *copy**=None ,  *level*=None ,  *fill_value*=None ,  *limit*=None ,  *tolerance*=None)
-```
 
-
-
-
-
-* **DataFrame.**reindex**(** *labels*=*None* ,  **index**=None ,  columns=None ,  axis=None ,  method=None,  copy=None ,  level=None ,  fill_value=nan ,  limit=None,  tolerance=None)
-* **Index.**reindex**(** *target* ,  *method*=**None* ,  *level**=None ,  limit=None,  tolerance=None)
 
 2. 常见参数的解释![1690340281638](image/5_Pandas/1690340281638.png)
 
@@ -128,11 +134,6 @@
 
 `.drop()`
 
-函数参数
-
-```python
-drop(*labels*=**None* , *axis**=0 ,  index=None,  columns=None, level=None,  inplace=False ,  errors='raise')
-```
 
 * `labels`要删除的索引或列标签及其组成的列表
 * `axis`默认为0，删除标签；设为1，则删除列
@@ -147,6 +148,7 @@ drop(*labels*=**None* , *axis**=0 ,  index=None,  columns=None, level=None,  inp
 `loc` `iloc`：可以用于DataFrame在行上的标签索引
 
 1. `loc`函数，允许常见的输入有：
+   [相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc)
 
 * 单个标签
 * 标签列表或数组
@@ -156,6 +158,7 @@ drop(*labels*=**None* , *axis**=0 ,  index=None,  columns=None, level=None,  inp
 * 可对齐的索引
 
 2. `iloc`函数，主要基于标签的整数位置，也可以使用布尔值，允许的常见输入有：
+   [相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html?highlight=iloc#pandas.DataFrame.iloc)
 
 * 一个整数
 * 整数的列表或数组
@@ -180,7 +183,14 @@ drop(*labels*=**None* , *axis**=0 ,  index=None,  columns=None, level=None,  inp
 
 ### `apply`函数：沿DataFrame的索引和列的应用函数
 
-1. 函数参数apply(func, axis=0, raw=False, result_type=None, args=(), **kwargs)
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html?highlight=apply#pandas.DataFrame.apply)
+
+
+1. 函数参数
+
+   ```python
+   apply(func, axis=0, raw=False, result_type=None, args=(), **kwargs)
+   ```
 
 * `func`应用于每一列或每一行的函数
 * `axis`默认为0，则将函数应用于每列；为1，则将函数应用于每行
@@ -189,7 +199,12 @@ drop(*labels*=**None* , *axis**=0 ,  index=None,  columns=None, level=None,  inp
 
 ### `applymap`函数：对DataFrame逐元素的应用函数
 
-1. 函数参数applymap（func， na_action=None， ****kwargs)**
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.applymap.html?highlight=applymap#pandas.DataFrame.applymap)
+
+1. 函数参数
+   ```python
+   DataFrame.applymap(func, na_action=None, **kwargs)
+   ```
 
 * `func`python函数，从单个值返回单个值
 * `na_action`默认为None;若为'ignore',则传播NaN值，而不将它们传递给func
@@ -200,34 +215,37 @@ drop(*labels*=**None* , *axis**=0 ,  index=None,  columns=None, level=None,  inp
 
 ### `sort_index`函数沿轴对对象进行排序
 
-函数参数
 
-```python
-sort_index(* ,  *axis*=**0* ,  *level**=None ,  *ascending*=True ,  *inplace*=False ,  *kind*='quicksort' ,  na_position='last' ,  sort_remaining=True ,  ignore_index=False ,  key=None)
-```
 
 * `axis`默认为0，标识行；为1，标识列
 * `level`默认为None;不是None,则按指定索引级别的值排序
-
 * `ascending`默认为真，升序排序；为假，降序排序
 * `inplace`默认为假，对数据进行修改，创建并返回新的对象承载其修改结果；默认为真，不创建新的对象，直接对原始对象进行修改
-
 * `kind`排序算法的选择，默认'quicksort'快速排序；若为'mergesort'，则为归并排序；若为'heapsort',则为堆排序
 * `na_position`默认为'last'，将NaN放在最后；若为'first'，将NaN放在开头
-
 * `sort_remaining`默认为真，若为真且按level和index排序是多级层级，在对指定层级排序后，其他层级也排序
 * `ignore_index`默认为假；若为真，则生成的轴将标记为0~n-1
 
 ### `sort_values`函数
 
-1. 函数参数sort_values(by, *, axis=0, ascending=True, inplace=False, kind='quicksort', na_position='last', ignore_index=False, key=None)
+[相关网址](https://pandas.pydata.org/docs/search.html?q=sort_values)
+
+1. 函数参数
+   ```python
+   sort_values(by, *, axis=0, ascending=True, inplace=False, kind='quicksort', na_position='last', ignore_index=False, key=None)
+   ```
 
 * `by`要作为排序依据的名称或名称列表。如果轴为 0 或“索引”，则 by 可能包含索引 级别和/或列标签。如果轴为 1 或“列”，则 by 可能包含列 级别和/或索引标签。
 * 其他参数与 `sort_index`要求一致
 
 ### `rank()`函数
 
-1. 函数参数rank(axis=0, method='average', numeric_only=False, na_option='keep', ascending=True, pct=False)
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html?highlight=rank#pandas.DataFrame.rank)
+
+1. 函数参数
+   ```python
+   rank(axis=0, method='average', numeric_only=False, na_option='keep', ascending=True, pct=False)
+   ```
 
 - `axis`默认为0，则对索引进行排名；为1，则对列进行排名
 - `method`默认为'average'，在每个组中分配平均排名；若为'min'，对整个组使用最小排名；若为'max'，对整个组使用最大排名；若使用'first'，按照值在数据中出现的次序分配排名；若为'dense',类似于method='min',但组间排名总是增加1，而不是一个组中的相等元素的数量
@@ -317,11 +335,18 @@ dtype: float64
 
 ### `unique`函数
 
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.unique.html?highlight=unique#pandas.unique)
+
 返回Series中的唯一值，按出现的顺序返回，不排序
 
 ### `value_counts`函数
 
-1. 函数参数value_counts( *subset*=**None* ,  *normalize**=False ,  *sort*=True ,  *ascending*=False, *dropna*=True)
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.value_counts.html?highlight=value_counts#pandas.DataFrame.value_counts)
+
+1. 函数参数
+   ```python
+   value_counts(subset=None, normalize=False, sort=True, ascending=False, dropna=True)
+   ```
 
 * `subset`标签或者标签列表，计数唯一组合时使用的列
 * `normalize`默认为假，返回比例而不是频率
@@ -331,10 +356,16 @@ dtype: float64
 
 ### `isin`函数
 
-1. isin(values)，计算表征Series中每个值是否包含于传入序列的布尔值数组
+[相关网址](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isin.html?highlight=isin#pandas.DataFrame.isin)
+
+1. ```计算表征Series中每个值是否包含于传入序列的布尔值数组
+   DataFrame.isin(values)
+   ```
 
 * `values`可以为迭代器，Series,DataFrame和字典
 
 ### `match`函数
+
+[相关网址](https://pandas.pydata.org/docs/search.html?q=match)
 
 计算数组中每个值的整数索引，形成一个唯一值数组
