@@ -1,4 +1,6 @@
-# 处理缺失数据
+# Chapter 7
+
+## 处理缺失数据
 
 pandas中的呈现方式，又称哨兵值：
 
@@ -15,7 +17,7 @@ NA的处理方法
 
 > `isna` 和 `isnull`的区别 ，没有区别
 
-## 过滤缺失数据
+#### 过滤缺失数据
 
 ```python
 DataFrame.dropna(*, axis=0, how=_NoDefault.no_default, thresh=_NoDefault.no_default, subset=None, inplace=False, ignore_index=False)
@@ -30,7 +32,7 @@ DataFrame.dropna(*, axis=0, how=_NoDefault.no_default, thresh=_NoDefault.no_defa
     - `all`该行/列中全为NA值，删除该行/列
   - 删除的非缺失值个数阈值 `thresh` （ 非NA值 没有达到这个数量的相应维度会被删除）
 
-## 填充缺失数据
+#### 填充缺失数据
 
 ```python
 DataFrame.fillna(value=None, *, method=None, axis=None, inplace=False, limit=None, downcast=None)
@@ -80,9 +82,9 @@ Out[46]:
 
 
 
-# 数据转换
+## 数据转换
 
-## 删除重复数据
+### 删除重复数据
 
 ```python
 DataFrame.duplicated(subset=None, keep='first')
@@ -114,7 +116,7 @@ Determines which duplicates (if any) to keep.
 
 [pandas.DataFrame.drop_duplicates — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop_duplicates.html?highlight=drop_duplicates#pandas.DataFrame.drop_duplicates)
 
-## 利用函数或映射进行数据转换
+### 利用函数或映射进行数据转换
 
 ```python
 Series.map(arg, na_action=None)
@@ -130,7 +132,7 @@ Series.map(arg, na_action=None)
 
 [pandas.Series.map — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html?highlight=map#pandas.Series.map)
 
-## 替换值
+### 替换值
 
 ```python
 DataFrame.replace(to_replace=None, value=_NoDefault.no_default, *, inplace=False, limit=None, regex=False, method=_NoDefault.no_default)
@@ -148,7 +150,7 @@ to_replace:str, regex, list, dict, Series, int, float, or None**
 
 [pandas.DataFrame.replace — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html?highlight=replace#pandas.DataFrame.replace)
 
-## 重命名轴索引
+### 重命名轴索引
 
 通过`map`方法
 
@@ -195,7 +197,7 @@ Whether to modify the DataFrame rather than creating a new one. If True then val
 >
 > 使用`index.map`进行修改等同于`df.rename(...inplace = True)` 
 
-## 离散化和分箱
+### 离散化和分箱
 
 ```python
 pandas.cut(x, bins, right=True, labels=None, retbins=False, precision=3, include_lowest=False, duplicates='raise', ordered=True)
@@ -245,7 +247,7 @@ labels:
 
 [Categorical data — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html?highlight=cut)
 
-## 检测和过滤异常值
+### 检测和过滤异常值
 
 ```python
 DataFrame.any(*, axis=0, bool_only=None, skipna=True, **kwargs)
@@ -257,7 +259,7 @@ DataFrame.any(*, axis=0, bool_only=None, skipna=True, **kwargs)
 
 [pandas.DataFrame.any — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.any.html?highlight=any#pandas.DataFrame.any)
 
-## 置换和随机采样
+### 置换和随机采样
 
 ### 置换
 
@@ -329,7 +331,7 @@ Returns
 
 [pandas.DataFrame.sample — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sample.html?highlight=sample#pandas.DataFrame.sample)
 
-## 计算指标/虚拟变量
+### 计算指标/虚拟变量
 
 > Dummy code
 >
@@ -381,7 +383,7 @@ Returns
 
 [pandas.DataFrame.add_prefix — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.add_prefix.html?highlight=add_prefix)
 
-# 扩展数据类型
+## 扩展数据类型
 
 问题：
 
@@ -394,14 +396,14 @@ Returns
 
 > 新数据类型的详解
 
-# 字符串操作
+## 字符串操作
 
-## Python内置的字符串对象方法
+### Python内置的字符串对象方法
 
 Python内置的字符串方法：
 *表格，或许可以参考Python Cookbook*
 
-## 正则表达式
+### 正则表达式
 
 > 正则表达式的简单书写和练习
 
@@ -409,7 +411,7 @@ Python内置的字符串方法：
 
 正则表达式：*表格*
 
-## Pandas的字符串函数
+### Pandas的字符串函数
 
 字符串规整工作
 
@@ -417,9 +419,9 @@ Python内置的字符串方法：
 
 Series的部分字符串方法：*表格*
 
-# 分类数据
+## 分类数据
 
-## 背景和目标
+### 背景和目标
 
 分类表示法/字典编码表示法：用整数表示的方法
 
@@ -427,7 +429,7 @@ Series的部分字符串方法：*表格*
 
 分类编码：表示分类的整数值
 
-## Pandas的分类扩展类型
+### Pandas的分类扩展类型
 
 `pandas.Categories`
 
@@ -437,7 +439,7 @@ Series的部分字符串方法：*表格*
 
 [Categorical data — pandas 2.0.3 documentation (pydata.org)](https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html?highlight=categorical)
 
-## 利用Categorical对象进行计算
+### 利用Categorical对象进行计算
 
 
 
@@ -445,7 +447,7 @@ Series的部分字符串方法：*表格*
 
 [第九章 分类数据 — Joyful Pandas 1.0 documentation (datawhale.club)](http://joyfulpandas.datawhale.club/Content/ch9.html)
 
-## 分类方法
+### 分类方法
 
 `.cat` `set_categories` `remove_unused_categories`
 

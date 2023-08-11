@@ -1,11 +1,11 @@
 # Project information
 site_name: Python-for-Data-Analysis-3E-Annotation
+# site_url: 
 site_author: Misaki
 
 # Repository
 repo_name: Python-for-Data-Analysis-3E-Annotation
-repo_url: https://github.com/WBYZ777/Python-for-Data-Analysis-3E-Annotation
-edit_uri: https://github.com/WBYZ777/Python-for-Data-Analysis-3E-Annotation/tree/main/docs
+repo_url: https://misaki-wang.github.io/Python-for-Data-Analysis-3E-Annotation/
 
 # Copyright
 copyright: Copyright &copy; 2023 Misaki
@@ -128,3 +128,6 @@ extra_css:
 
 
 # Page tree
+nav:
+  - Home: index.md
+    - Content: chapter7.md
