@@ -130,4 +130,4 @@ extra_css:
 # Page tree
 nav:
   - Home: index.md
-    - Content: chapter7.md
+  - Content: chapter7.md
