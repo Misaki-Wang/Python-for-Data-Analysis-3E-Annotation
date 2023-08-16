@@ -1,0 +1,1150 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Misaki">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Content - Python-for-Data-Analysis-3E-Annotation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-7" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Python-for-Data-Analysis-3E-Annotation" class="md-header__button md-logo" aria-label="Python-for-Data-Analysis-3E-Annotation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python-for-Data-Analysis-3E-Annotation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Content
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://misaki-wang.github.io/Python-for-Data-Analysis-3E-Annotation/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Python-for-Data-Analysis-3E-Annotation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python-for-Data-Analysis-3E-Annotation" class="md-nav__button md-logo" aria-label="Python-for-Data-Analysis-3E-Annotation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python-for-Data-Analysis-3E-Annotation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://misaki-wang.github.io/Python-for-Data-Analysis-3E-Annotation/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Python-for-Data-Analysis-3E-Annotation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Content
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Content
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    处理缺失数据
+  </a>
+  
+    <nav class="md-nav" aria-label="处理缺失数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    过滤缺失数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    填充缺失数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据转换
+  </a>
+  
+    <nav class="md-nav" aria-label="数据转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    删除重复数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    利用函数或映射进行数据转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    替换值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    重命名轴索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    离散化和分箱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    检测和过滤异常值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    置换和随机采样
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    置换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    随机采样
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    计算指标/虚拟变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    扩展数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    字符串操作
+  </a>
+  
+    <nav class="md-nav" aria-label="字符串操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python内置的字符串对象方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    正则表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    Pandas的字符串函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    分类数据
+  </a>
+  
+    <nav class="md-nav" aria-label="分类数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    背景和目标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas_1" class="md-nav__link">
+    Pandas的分类扩展类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical" class="md-nav__link">
+    利用Categorical对象进行计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    分类方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    处理缺失数据
+  </a>
+  
+    <nav class="md-nav" aria-label="处理缺失数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    过滤缺失数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    填充缺失数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据转换
+  </a>
+  
+    <nav class="md-nav" aria-label="数据转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    删除重复数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    利用函数或映射进行数据转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    替换值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    重命名轴索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    离散化和分箱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    检测和过滤异常值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    置换和随机采样
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    置换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    随机采样
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    计算指标/虚拟变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    扩展数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    字符串操作
+  </a>
+  
+    <nav class="md-nav" aria-label="字符串操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python内置的字符串对象方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    正则表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    Pandas的字符串函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    分类数据
+  </a>
+  
+    <nav class="md-nav" aria-label="分类数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    背景和目标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas_1" class="md-nav__link">
+    Pandas的分类扩展类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorical" class="md-nav__link">
+    利用Categorical对象进行计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    分类方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapter-7">Chapter 7<a class="headerlink" href="#chapter-7" title="Permanent link">&para;</a></h1>
+<h2 id="_1">处理缺失数据<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>pandas中的呈现方式，又称哨兵值：</p>
+<ul>
+<li>在 <code>numpy</code> 中利用 <code>np.nan</code> 来表示缺失值</li>
+</ul>
+<blockquote>
+<p>？这里的NaN是指numpy中的NaN吗，只针对浮点值吗？
+- NA(Not Available) Python内置的None值
+- &gt; <code>pandas.NA</code> ?</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.NA.html?highlight=pandas na#pandas.NA">pandas.NA — pandas 2.0.3 documentation (pydata.org)</a></p>
+</blockquote>
+<p>NA的处理方法
+<code>dropna  fillna  isnull  notnull</code> </p>
+<blockquote>
+<p><code>isna</code> 和 <code>isnull</code>的区别 ，没有区别</p>
+</blockquote>
+<h4 id="_2">过滤缺失数据<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">_NoDefault</span><span class="o">.</span><span class="n">no_default</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="n">_NoDefault</span><span class="o">.</span><span class="n">no_default</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Series，返回一个仅含非空数据和索引值的Series</li>
+<li>DataFrame，</li>
+<li>参数：
+    轴方向  <code>axis{0 or ‘index’, 1 or ‘columns’}, default 0</code> </li>
+<li>删除方式 <code>how{‘any’, ‘all’}, default ‘any’</code> <ul>
+<li><code>any</code>该行/列中存在NA值，删除该行/列</li>
+<li><code>all</code>该行/列中全为NA值，删除该行/列</li>
+</ul>
+</li>
+<li>删除的非缺失值个数阈值 <code>thresh</code> （ 非NA值 没有达到这个数量的相应维度会被删除）</li>
+</ul>
+<h4 id="_3">填充缺失数据<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">downcast</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>参数：</p>
+<ul>
+<li>
+<p>填充值:<code>value:scalar, dict, Series, or DataFrame</code>
+  可以是标量，也可以是索引到元素的字典映射</p>
+</li>
+<li>
+<p>填充方法<code>method:{‘backfill’, ‘bfill’, ‘ffill’, None}, default None</code></p>
+</li>
+<li>
+<p><code>bfill</code>后面的元素填充</p>
+</li>
+<li>
+<p><code>ffill</code>用前面的元素填充</p>
+</li>
+<li>
+<p>连续缺失值的最大填充次数<code>limit:int, default None</code></p>
+</li>
+<li>
+<p>是否对原有对象进行修改<code>inplace:bool, default False</code></p>
+</li>
+</ul>
+<blockquote>
+<p>fillna会默认返回新对象，若<code>inplace = True</code>，则直接对现有对象进行就地修改，而非返回新对象</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">44</span><span class="p">]:</span> <span class="n">df</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">44</span><span class="p">]:</span> 
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>          <span class="mi">0</span>         <span class="mi">1</span>         <span class="mi">2</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="mi">0</span>  <span class="mf">0.476985</span>  <span class="mf">3.248944</span> <span class="o">-</span><span class="mf">1.021228</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="mi">1</span> <span class="o">-</span><span class="mf">0.577087</span>  <span class="mf">0.124121</span>  <span class="mf">0.302614</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="mi">2</span>  <span class="mf">0.523772</span>       <span class="n">NaN</span>  <span class="mf">1.343810</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="mi">3</span> <span class="o">-</span><span class="mf">0.713544</span>       <span class="n">NaN</span> <span class="o">-</span><span class="mf">2.370232</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="mi">4</span> <span class="o">-</span><span class="mf">1.860761</span>       <span class="n">NaN</span>       <span class="n">NaN</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="mi">5</span> <span class="o">-</span><span class="mf">1.265934</span>       <span class="n">NaN</span>       <span class="n">NaN</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1">#在第1列中，从第2行开始用前面的元素进行填充(ffill)，最大填写2次，即填写2、3两行</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">In</span> <span class="p">[</span><span class="mi">46</span><span class="p">]:</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;ffill&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">Out</span><span class="p">[</span><span class="mi">46</span><span class="p">]:</span> 
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>          <span class="mi">0</span>         <span class="mi">1</span>         <span class="mi">2</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="mi">0</span>  <span class="mf">0.476985</span>  <span class="mf">3.248944</span> <span class="o">-</span><span class="mf">1.021228</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="mi">1</span> <span class="o">-</span><span class="mf">0.577087</span>  <span class="mf">0.124121</span>  <span class="mf">0.302614</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="mi">2</span>  <span class="mf">0.523772</span>  <span class="mf">0.124121</span>  <span class="mf">1.343810</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="mi">3</span> <span class="o">-</span><span class="mf">0.713544</span>  <span class="mf">0.124121</span> <span class="o">-</span><span class="mf">2.370232</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="mi">4</span> <span class="o">-</span><span class="mf">1.860761</span>       <span class="n">NaN</span> <span class="o">-</span><span class="mf">2.370232</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="mi">5</span> <span class="o">-</span><span class="mf">1.265934</span>       <span class="n">NaN</span> <span class="o">-</span><span class="mf">2.370232</span>
+</code></pre></div>
+<h2 id="_4">数据转换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">删除重复数据<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>返回表示重复行的bool Series</p>
+<p><code False="False" _first_="‘first’," _last_="‘last’,">keep</code>, 默认 ‘first’ </p>
+<ul>
+<li><code>first</code> : Mark duplicates as <code>True</code> except for the first occurrence.</li>
+<li><code>last</code> : Mark duplicates as <code>True</code> except for the last occurrence.</li>
+<li>False : Mark all duplicates as <code>True</code>.</li>
+</ul>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html?highlight=duplicated#pandas.DataFrame.duplicated">pandas.DataFrame.duplicated — pandas 2.0.3 documentation (pydata.org)</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>删除缺失值</p>
+<p><strong>keep</strong>{‘first’, ‘last’, <code>False</code>}, default ‘first’</p>
+<p>Determines which duplicates (if any) to keep.</p>
+<ul>
+<li>‘first’ : Drop duplicates except for the first occurrence.</li>
+<li>‘last’ : Drop duplicates except for the last occurrence.</li>
+<li><code>False</code> : Drop all duplicates.</li>
+</ul>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop_duplicates.html?highlight=drop_duplicates#pandas.DataFrame.drop_duplicates">pandas.DataFrame.drop_duplicates — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_6">利用函数或映射进行数据转换<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Series</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>根据输入映射或函数映射Series，实现元素集转换及其他的数据清洗工作</p>
+<p><strong>arg****function, collections.abc.Mapping subclass or Series</strong></p>
+<p><strong None_="None," _ignore_="‘ignore’">na_action</strong>, default None 对NA值的处理</p>
+<ul>
+<li>如果‘ignore’，则传播 NaN 值，而不将其传递给映射对应。</li>
+</ul>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html?highlight=map#pandas.Series.map">pandas.Series.map — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_7">替换值<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_NoDefault</span><span class="o">.</span><span class="n">no_default</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">_NoDefault</span><span class="o">.</span><span class="n">no_default</span><span class="p">)</span>
+</code></pre></div>
+<p>用 <code>value</code> 替换<code>to_replace</code> 中给出的值。</p>
+<p>to_replace:str, regex, list, dict, Series, int, float, or None**</p>
+<blockquote>
+<p><code>to_replace</code>的值的寻找，详见doc</p>
+</blockquote>
+<p><strong>value**</strong>: scalar, dict, list, str, regex, default None**</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html?highlight=replace#pandas.DataFrame.replace">pandas.DataFrame.replace — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_8">重命名轴索引<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>通过<code>map</code>方法</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="n">source</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>mapper****function, dict, or Series</strong></p>
+<p><strong None_="None," _ignore_="‘ignore’">na_action**</strong>** </p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.map.html?highlight=index map#pandas.Index.map">pandas.Index.map — pandas 2.0.3 documentation (pydata.org)</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">mapper</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>mapper****dict-like or function</strong></p>
+<p><strong>index****dict-like or function</strong></p>
+<p><strong>columns****dict-like or function</strong></p>
+<p><strong 0="0" 1="1" _columns_="‘columns’" _index_="‘index’," or="or">axis**</strong>, default 0**</p>
+<p><strong>inplace</strong>:bool, default False
+Whether to modify the DataFrame rather than creating a new one. If True then value of copy is ignored.</p>
+<blockquote>
+<p>两种写法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">)</span>
+</code></pre></div>
+<p>以上两者等价，<code>index</code>同理</p>
+</blockquote>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html?highlight=rename#pandas.DataFrame.rename">pandas.DataFrame.rename (pydata.org)</a></p>
+<blockquote>
+<p>以上两种写法中：</p>
+<p>使用<code>index.map</code>进行修改等同于<code>df.rename(...inplace = True)</code> </p>
+</blockquote>
+<h3 id="_9">离散化和分箱<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">pandas</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retbins</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">duplicates</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<p>将数值划分为离散区间</p>
+<p>待划分的数组  <strong>x</strong>:array-like
+The input array to be binned. Must be 1-dimensional.</p>
+<p><strong>bins**</strong>:int, sequence of scalars, or IntervalIndex**
+The criteria to bin by.</p>
+<ul>
+<li>int : Defines the number of equal-width bins in the range of x. The range of x is extended by .1% on each side to include the minimum and maximum values of x.</li>
+<li>sequence of scalars : Defines the bin edges allowing for non-uniform width. No extension of the range of x is done.</li>
+<li>IntervalIndex : Defines the exact bins to be used. Note that IntervalIndex for bins must be non-overlapping.</li>
+</ul>
+<p><strong>right</strong>：bool, default True
+决定那一边是封闭的，当<code>right == True</code> 左开右闭，当<code>right == False</code>左闭右开
+Indicates whether bins includes the rightmost edge or not. If <code>right == True</code> (the default), then the bins <code>[1, 2, 3, 4]</code> indicate (1,2], (2,3], (3,4]. This argument is ignored when bins is an IntervalIndex.</p>
+<p><strong>precision</strong>:int, default 3
+The precision at which to store and display the bins labels.</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html?highlight=cut">pandas.cut — pandas 2.0.3 documentation (pydata.org)</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">pandas</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retbins</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">duplicates</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>根据样本分位数对样本进行划分，便于得到大小基本相等的分箱</p>
+<p><strong>x****1d ndarray or Series</strong></p>
+<p><strong>q****int or list-like of float</strong>
+Number of quantiles. 10 for deciles, 4 for quartiles, etc. Alternately array of quantiles, e.g. [0, .25, .5, .75, 1.] for quartiles.</p>
+<p>labels:</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.qcut.html?highlight=cut#pandas.qcut">pandas.qcut — pandas 2.0.3 documentation (pydata.org)</a></p>
+<p><strong>categorical data type</strong></p>
+<blockquote>
+<p>这里对 pandas categorical data type做一个简短的解释</p>
+</blockquote>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html?highlight=cut">Categorical data — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_10">检测和过滤异常值<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bool_only</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+<p>返回任何元素是否为 True，可能在一个轴上。</p>
+<p><strong 0="0" 1="1" None="None" _columns_="‘columns’," _index_="‘index’," or="or">axis**</strong>, default 0**</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.any.html?highlight=any#pandas.DataFrame.any">pandas.DataFrame.any — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_11">置换和随机采样<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="_12">置换<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+<p>随机排列序列，或返回一个排列范围。</p>
+<p>参数：</p>
+<p>**x**int or array_like
+If <em>x</em> is an integer, randomly permute <code>np.arange(x)</code>. If <em>x</em> is an array, make a copy and shuffle the elements randomly.</p>
+<p>返回值：</p>
+<p>**out**ndarray
+Permuted sequence or array range.</p>
+<p><a href="https://numpy.org/doc/1.25/reference/random/generated/numpy.random.permutation.html#numpy.random.permutation">numpy.random.permutation — NumPy v1.25 Manual</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+<p>沿轴返回给定位置索引中的元素。</p>
+<p>Parameters</p>
+<ul>
+<li>
+<p><strong 0="0" 1="1" None="None" _columns_="‘columns’," _index_="‘index’," or="or">axis**</strong>, default 0**</p>
+</li>
+<li>
+<p>**indices**array-like</p>
+</li>
+</ul>
+<p>An array of ints indicating which positions to take.</p>
+<p>Returns</p>
+<ul>
+<li>same type as caller</li>
+</ul>
+<p>An array-like containing the elements taken from the object.</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.take.html?highlight=take#pandas.DataFrame.take">pandas.DataFrame.take — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_13">随机采样<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">frac</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span>
+</code></pre></div>
+<p>Parameters</p>
+<ul>
+<li>**n**int, optional</li>
+</ul>
+<p>Number of items from axis to return. Cannot be used with frac. Default = 1 if frac = None.</p>
+<ul>
+<li>**frac**float, optional</li>
+</ul>
+<p>Fraction of axis items to return. Cannot be used with n.</p>
+<ul>
+<li>**replace**bool, default False</li>
+</ul>
+<p>Allow or disallow sampling of the same row more than once.</p>
+<p>Returns</p>
+<ul>
+<li>Series or DataFrame</li>
+</ul>
+<p>A new object of same type as caller containing n items randomly sampled from the caller object.</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sample.html?highlight=sample#pandas.DataFrame.sample">pandas.DataFrame.sample — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="_14">计算指标/虚拟变量<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Dummy code</p>
+<p><a href="https://en.wikipedia.org/wiki/Dummy_variable_(statistics)">Dummy variable (statistics) - Wikipedia</a></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">pandas</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prefix_sep</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">dummy_na</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>将分类变量转换为虚拟变量/指标变量。</p>
+<p>Parameters</p>
+<ul>
+<li>**data**array-like, Series, or DataFrame</li>
+</ul>
+<p>Data of which to get dummy indicators.</p>
+<ul>
+<li>**prefix**str, list of str, or dict of str, default None</li>
+</ul>
+<p>Returns</p>
+<ul>
+<li>DataFrame</li>
+</ul>
+<p>Dummy-coded data. If data contains other columns than the dummy-coded one(s), these will be prepended, unaltered, to the result.</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html?highlight=get_dummies">pandas.get_dummies — pandas 2.0.3 documentation (pydata.org)</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">DataFrame</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>为标签加上字符串前缀。</p>
+<p>Parameters</p>
+<ul>
+<li>prefix  str</li>
+</ul>
+<p>The string to add before each label.</p>
+<ul>
+<li><strong 1="1" None="None" _0="{0" _columns_="‘columns’," _index_="‘index’," or="or">axis</strong>}, default None</li>
+</ul>
+<p>Axis to add prefix on</p>
+<p>Returns</p>
+<ul>
+<li>Series or DataFrame</li>
+</ul>
+<p>New Series or DataFrame with updated labels.</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.add_prefix.html?highlight=add_prefix">pandas.DataFrame.add_prefix — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h2 id="_15">扩展数据类型<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>问题：</p>
+<ul>
+<li>某些数据类型缺失值的处理不完备</li>
+<li>含有大量数据的数据集，计算开销大</li>
+<li>某些数据类型需要使用开销大的Python对象数组才能实现高效计算</li>
+</ul>
+<p>为解决以上问题，Pandas发展出了扩展类型，可创建NumPy原本不支持的新数据类型。
+这些新数据类型可以当作NumPy数组的一级类，等同于其他NumPy原生数据</p>
+<blockquote>
+<p>新数据类型的详解</p>
+</blockquote>
+<h2 id="_16">字符串操作<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="python">Python内置的字符串对象方法<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<p>Python内置的字符串方法：
+<em>表格，或许可以参考Python Cookbook</em></p>
+<h3 id="_17">正则表达式<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>正则表达式的简单书写和练习</p>
+</blockquote>
+<p>正则表达式常称作<code>regex</code>，Python中内置<code>re</code>模块负责对字符串应用正则表达式</p>
+<p>正则表达式：<em>表格</em></p>
+<h3 id="pandas">Pandas的字符串函数<a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h3>
+<p>字符串规整工作</p>
+<p>通过<code>Series</code>的<code>str</code>属性中的方法跳过并传播<code>NA</code>值</p>
+<p>Series的部分字符串方法：<em>表格</em></p>
+<h2 id="_18">分类数据<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">背景和目标<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>分类表示法/字典编码表示法：用整数表示的方法</p>
+<p>数据的分类/字典/层级：不同值的数组</p>
+<p>分类编码：表示分类的整数值</p>
+<h3 id="pandas_1">Pandas的分类扩展类型<a class="headerlink" href="#pandas_1" title="Permanent link">&para;</a></h3>
+<p><code>pandas.Categories</code></p>
+<p>有<code>categories</code>和<code>codes</code>两个属性</p>
+<p><code>Categories</code>的构造</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html?highlight=categorical">Categorical data — pandas 2.0.3 documentation (pydata.org)</a></p>
+<h3 id="categorical">利用Categorical对象进行计算<a class="headerlink" href="#categorical" title="Permanent link">&para;</a></h3>
+<p><a href="http://joyfulpandas.datawhale.club/Content/ch9.html">第九章 分类数据 — Joyful Pandas 1.0 documentation (datawhale.club)</a></p>
+<h3 id="_20">分类方法<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><code>.cat</code> <code>set_categories</code> <code>remove_unused_categories</code></p>
+<p>Pandas中Series的分类方法：<em>表格</em></p>
+<p>one-hot code</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: Home" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Misaki
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>
