@@ -1,3 +1,6 @@
+1. 代码块
+2. 网址
+
 # 基本数据结构
 
 两种基本的数据结构
@@ -91,13 +94,7 @@ class pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=Non
 
 1. 不同对象reindex方法的参数
 
-```python
-DataFrame.reindex(labels=None, *, index=None, columns=None, axis=None, method=None, copy=None, level=None, fill_value=nan, limit=None, tolerance=None)
 
-Index.reindex(target, method=None, level=None, limit=None, tolerance=None)
-
-Series.reindex(index=None, *, axis=None, method=None, copy=None, level=None, fill_value=None, limit=None, tolerance=None)
-```
 
 2. 常见参数的解释![1690340281638](image/5_Pandas/1690340281638.png)
 
@@ -111,7 +108,7 @@ Series.reindex(index=None, *, axis=None, method=None, copy=None, level=None, fil
   obj3 = obj.reindex(range(6),method = 'bfill')
   print(obj2)
   print(obj3)
-
+  
   #输出结果为
   0    a
   2    b
@@ -137,13 +134,6 @@ Series.reindex(index=None, *, axis=None, method=None, copy=None, level=None, fil
 
 `.drop()`
 
-[相关网址](https://pandas.pydata.org/docs/search.html?q=drop)
-
-1. 函数参数
-
-   ```python
-   DataFrame.drop(labels=None, *, axis=0, index=None, columns=None, level=None, inplace=False, errors='raise')
-   ```
 
 * `labels`要删除的索引或列标签及其组成的列表
 * `axis`默认为0，删除标签；设为1，则删除列
@@ -225,12 +215,7 @@ Series.reindex(index=None, *, axis=None, method=None, copy=None, level=None, fil
 
 ### `sort_index`函数沿轴对对象进行排序
 
-[相关网址](https://pandas.pydata.org/docs/search.html?q=sort_index)
 
-1. 函数参数
-   ```python
-   sort_index(*, axis=0, level=None, ascending=True, inplace=False, kind='quicksort', na_position='last', sort_remaining=True, ignore_index=False, key=None)
-   ```
 
 * `axis`默认为0，标识行；为1，标识列
 * `level`默认为None;不是None,则按指定索引级别的值排序
